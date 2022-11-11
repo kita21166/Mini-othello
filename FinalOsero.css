@@ -1,0 +1,11 @@
+#svgWrap{
+    height: 100vmin;
+    width: 100vmin;
+    margin: 0 auto;
+}
+.pieceCircle{
+    transition: all 500ms linear 0s;
+}
+#LogArea{
+    width: 40vw;
+}
