@@ -7,8 +7,11 @@
     transition: all 500ms linear 0s;
 }
 #LogArea{
-    width: 40vw;
+    width: 200px;
+    font-size: 22px;
+    font-family: serif;
     color: #484;
     border: 1px solid #4f4;
+    padding: 20px;
     margin: 20px;
 }
