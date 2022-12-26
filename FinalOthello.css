@@ -1,6 +1,6 @@
 #svgWrap{
-    height: 100vmin;
-    width: 100vmin;
+    height: 80vmin;
+    width: 80vmin;
     margin: 0 auto;
 }
 .pieceCircle{
@@ -8,5 +8,7 @@
 }
 #LogArea{
     width: 40vw;
-    color: #444;
+    color: #484;
+    border: 1px solid #4f4;
+    margin: 20px;
 }
