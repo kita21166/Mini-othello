@@ -1,4 +1,4 @@
-"use strict";
+"use strict";]
 const logArea = {
     Area: document.getElementById(`LogArea`),
     LogOfBlack(content) {
@@ -8,13 +8,13 @@ const logArea = {
         this.Area.insertAdjacentHTML("afterbegin", `CALC: ${content}(White); <br>`);
     },
 };
-const showMap = function () {
+const showMap = function (Arr0, Arr1) {
     let vec = "";
     for (let i = 1; i <= 8; i++) {
         for (let j = 1; j <= 8; j++) {
-            if (PiecesAddress.None.includes(`${j}${i}`)) {
+            if (Arr0.includes(`${j}${i}`)) {
                 vec += "0 ";
-            } else if (PiecesAddress.Black.includes(`${j}${i}`)) {
+            } else if (Arr1.includes(`${j}${i}`)) {
                 vec += "1 ";
             } else {
                 vec += "2 ";
@@ -237,6 +237,11 @@ window.addEventListener("load", function () {
         }
     }
 });
+document.getElementById("svgWrap").addEventListener("click", deleteLogs)
+const deleteLogs = function () {
+    LogArea.Area.textContent = "";
+    document.getElementById("svgWrap").removeEventListener("click", deleteLogs);
+}
 const putBlackByPlayer = function () {
     const Address = this.id;
     const PiecesAreToBlack = SearchPiecesAre.FromWhiteToBlack(Address);
@@ -251,7 +256,7 @@ const putBlackByPlayer = function () {
     this.removeEventListener("click", putBlackByPlayer);
     putWhiteByCalc();
     Judge();
-    showMap();
+    showMap(PiecesAddress.None,PiecesAddress.White);
 };
 const FromNumToABC = ["a", "b", "c", "d", "e", "f", "g", "h"];
 const PRIORITY = [
