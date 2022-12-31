@@ -1,4 +1,4 @@
-"use strict";]
+"use strict";
 const logArea = {
     Area: document.getElementById(`LogArea`),
     LogOfBlack(content) {
@@ -323,12 +323,5 @@ const PRIORITY = [
 ];
 
 const IncrementOrDecrement = [
-    [1, 1],
-    [1, -1],
-    [-1, 1],
-    [-1, -1],
-    [0, 1],
-    [0, -1],
-    [1, 0],
-    [-1, 0],
+    [1, 1], [1, -1], [-1, 1], [-1, -1], [0, 1], [0, -1], [1, 0], [-1, 0],
 ];
